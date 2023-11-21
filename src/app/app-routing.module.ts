@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+
+export const routes: Routes = [
   {
     path: 'inicio',
-    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+    loadChildren: () => import('./pages/inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
     path: '',
@@ -13,25 +14,24 @@ const routes: Routes = [
   },
   {
     path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
+    loadChildren: () => import('./pages/alert/alert.module').then(m => m.AlertPageModule)
   },
   {
     path: 'action-sheet',
-    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
-  },
-  {
-    path: 'input',
-    loadChildren: () => import('./pagers/input/input.module').then( m => m.InputPageModule)
+    loadChildren: () => import('./pages/action-sheet/action-sheet.module').then(m => m.ActionSheetPageModule)
   },
   {
     path: 'avatar',
-    loadChildren: () => import('./pages/avatar/avatar.module').then( m => m.AvatarPageModule)
+    loadChildren: () => import('./pages/avatar/avatar.module').then(m => m.AvatarPageModule)
   },
   {
     path: 'button',
-    loadChildren: () => import('./pages/button/button.module').then( m => m.ButtonPageModule)
+    loadChildren: () => import('./pages/button/button.module').then(m => m.ButtonPageModule)
   },
-  
+  {
+    path: 'input',
+    loadChildren: () => import('./pages/input/input.module').then(m => m.InputPageModule)
+  },
 ];
 
 @NgModule({

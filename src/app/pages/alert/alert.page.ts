@@ -6,9 +6,13 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./alert.page.scss'],
 })
 export class AlertPage implements OnInit {
+  
   handlerMessage = '';
   roleMessage = '';
+  
   constructor(private alertCtrl: AlertController) { }
+  
+  
   ngOnInit() {
   }
   async presentAlert() {

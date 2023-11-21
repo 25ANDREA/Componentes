@@ -6,17 +6,21 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['./action-sheet.page.scss'],
 })
 export class ActionSheetPage implements OnInit {
+  
   constructor(private actionSheetCtrl: ActionSheetController) { }
+  
   ngOnInit() {
   }
   onClick() {
+  
     this.presentActionSheet();
   }
   //.actionSheetController.create
+  
   async presentActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
-      backdropDismiss: false, //significa que no se puede cerrar, cunadose hace clic afuera del entorno
       header: 'Albumnes',
+      backdropDismiss: false, //significa que no se puede cerrar, cunadose hace clic afuera del entorno
       cssClass: 'my-custom-class',
       buttons: [{
         text: 'Delete',
